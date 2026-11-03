@@ -22,15 +22,56 @@
                     </h1>
                 </div>
             </div>
+            <!-- Contenidos -->
+            <div class="accordion" id="accordion"> <!--Generalmente se adjunta todos los contenidos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Módulo 1: Pesquisa
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Aquí irá el video.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion" id="accordionTwo"> <!--Generalmente se adjunta todos los contenidos -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            Módulo 2: Otro contenido
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionTwo">
+                    <div class="accordion-body">
+                        Loren ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <!-- Contenido del acordeón -->
-         
-
-        <!-- Bootstrap 5 JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Alerta -->
+        <div class="modal fade" id="modalInicio" tabindex="-1">
+             <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title">⚠️ Aviso Importante - UPOT</h5>
+                    </div>
+                    <div class="modal-body">
+                        Bienvenido al portal de capacitación. Revisa cada video completo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <!-- 2. Aquí falta conectar nuestro archivo app.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
 
     </body> 
 </html>
