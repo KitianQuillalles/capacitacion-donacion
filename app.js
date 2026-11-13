@@ -1,19 +1,25 @@
 const cajaModal = document.getElementById("modalInicio");
 const modalBienvenida = new bootstrap.Modal(cajaModal);
 const miVideo = document.getElementById("videoModulo");
+const btnGenerarEncuesta = document.getElementById("GenerarEncuesta");
 modalBienvenida.show();
 
 document.getElementById("GenerarEncuesta").disabled = true;
 document.getElementById("btnPregunta2").disabled = true;
 document.getElementById("salir").disabled = true;
 
+btnGenerarEncuesta.addEventListener("click", function() {
+    document.getElementById("btnPregunta2").disabled = true;
+    document.getElementById("salir").disabled = true;
+});
 miVideo.addEventListener("ended", function() {
-    // Aquí adentro va la Pieza 3
     document.getElementById("GenerarEncuesta").disabled = false;
 });
 document.getElementById("btnEvaluar").addEventListener("click", function() {
     const seleccion = document.querySelector('input[name="pregunta1"]:checked');
     const cajaMensaje = document.getElementById("resultadoEncuesta");
+    document.getElementById("btnPregunta2").disabled = true;
+    document.getElementById("salir").disabled = true;
 
     if (seleccion.value === "B") {
         cajaMensaje.innerHTML = '<div class="alert alert-success mb-0">✅ ¡Correcto! Aguante Los Tres.</div>  ';
