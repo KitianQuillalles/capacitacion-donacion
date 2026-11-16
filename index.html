@@ -7,141 +7,438 @@
         <!-- Bootstrap 5 CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
-    <body class="bg-light py-4">
+    <body class="bg-light py-4" style="font-family: 'Arial', Arial, sans-serif;">
         <!-- Contenido principal -->
         <div class="container bg-white p-4 rounded shadow-sm" style="max-width: 900px;">
             <div class="row align-items-center justify-content-center mb-4">
                 <img 
                     class="img-fluid w-25" 
-                    src="img\Póster Natalicio bebé dibujo vaca y flores acuarela fondo blanco.png" 
+                    src="img/LOGO-NUEVO-COLOR-1-scaled.png" 
                     alt="Póster"
+                    aria-label="Póster"
                 >
                 <div class="col-12 col-md-8 text-center text-md-start">
-                    <h1 class="h4 fw-bold mb-0">
-                        Procuramiento de Órganos y Tejidos - Hospital San Pablo de Coquimbo
+                    <h1 class="h4 fw-bold mb-0" style="color: #1567a4; font-family: 'Arial Black', Arial, sans-serif;">
+                        Unidad de Procuramiento de Órganos y Tejidos - Hospital San Pablo de Coquimbo
                     </h1>
                 </div>
             </div>
+
+            <h4 class="text-center mb-4" style="color: #1567a4; font-family: 'Arial Black', Arial, sans-serif;">¡Bienvenidos/as a consultas rápidas UPOT!</h4>
+            <p style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                Este espacio ha sido creado para facilitar el acceso a información actualizada y herramientas de apoyo que permitan fortalecer los conocimientos y orientar a los equipos de salud en los procesos de procuramiento de órganos y tejidos.
+                Recuerda que a través de la identificación temprana, la notificación oportuna y el trabajo colaborativo, todos podemos ser agentes de cambio, contribuyendo a generar nuevas oportunidades de vida, donde una notificación a tiempo puede marcar la diferencia y transformar vidas.
+            </p>
+        
             <!-- Contenidos -->
-            <div class="accordion" id="accordion"> <!--Generalmente se adjunta todos los contenidos -->
+            <div class="accordion mb-2" id="accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Módulo 1: Pesquisa
+                        <button class="accordion-button collapsed" style="background-color: #1567a4; color: white; border: none; font-family: 'Arial Black', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Módulo 1: Test de Apnea
                         </button>
                     </h2>
-                </div>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        <video id="videoModulo" class="w-50 d-block mx-auto rounded shadow-sm" controls>
-                            <source src="img/Download.mp4" type="video/mp4">
-                        </video>
-                        <p class="text-center">Termina el video para responder la encuesta. 🔒</p>
-                        <button id="GenerarEncuesta" class="btn btn-primary d-block mx-auto mt-3" data-bs-toggle="modal" data-bs-target="#modalEncuesta">Generar Encuesta</button>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <video id="videoModulo" class="w-50 d-block mx-auto rounded shadow-sm" controls>
+                                <source src="img/Download.mp4" type="video/mp4">
+                            </video>
+                            <p class="text-center mt-2">Termina el video para responder la encuesta. 🔒</p>
+                            <button id="GenerarEncuesta" class="btn d-block mx-auto mt-3" data-bs-toggle="modal" data-bs-target="#modalEncuesta" style="background-color: #1567a4; color: white; border: none; font-family: 'Arial', Arial, sans-serif;" disabled>Evalúa lo aprendido</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="accordion" id="accordionTwo"> <!--Generalmente se adjunta todos los contenidos -->
+
+            <!-- Módulo 2: Consulta Córneas -->
+            <div class="accordion mb-2" id="accordionTwo">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                            Módulo 2: Otro contenido
+                        <button class="accordion-button collapsed" style="background-color: #f6b21f; color: white; border: none; font-family: 'Arial Black', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Módulo 2: Consulta Córneas
                         </button>
                     </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionTwo">
+                        <div class="accordion-body">
+                            
+                            <!-- Inicio de Mini Acordeones de Córneas -->
+                            <div class="accordion" id="subAcordeonCorneas">
+
+                                <!-- Pregunta 1 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP1" aria-expanded="false" aria-controls="corneaP1">
+                                            1. ¿Qué pacientes pueden donar córneas?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP1" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                                            <p> La córnea es un tejido transparente de aproximadamente 1,2 milímetros de espesor, ubicado en el segmento anterior del ojo. Cumple la función de una lente natural, permitiendo el paso de la luz hacia la retina y haciendo posible la visión.</p> <br>
+                                            <p> Pueden ser donantes de córneas las personas fallecidas por muerte por criterio neurológico, paro cardiorrespiratorio (PCR) de causa conocida o que presenten un pronóstico de fallecimiento inminente, siempre que cumplan con los criterios clínicos establecidos para la donación de tejido corneal.</p> <br>
+                                            <p> Para determinar si una persona puede ser donante, el personal de la Unidad de Procuramiento de Órganos y Tejidos (UPOT) realiza una evaluación exhaustiva que considera la revisión de la historia clínica, el examen físico y una entrevista breve con la familia. Esto permite identificar posibles antecedentes de riesgo y descartar la presencia de enfermedades transmisibles que puedan contraindicar la donación.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 2 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP2" aria-expanded="false" aria-controls="corneaP2">
+                                            2. ¿Qué deben hacer cuando el paciente fallece?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP2" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                                            
+                                            <p> Notificar inmediatamente a UPOT al número +56 9 62482159 o Anexo: 516803.</p>   
+                                            <p> El equipo del servicio donde se encuentre el paciente posible donante de córneas, debe aplicar cuidados exclusivos en base a los criterios de inclusión, incluso previamente a la evaluación por coordinadora de Procuramiento:</p>
+                                            <p> - Posicionar al paciente en Semi Fowler a 30° para disminuir el edema palpebral.</p>
+                                            <p> - Mantener ambos párpados cerrados utilizando tela adhesiva, tomando los resguardos necesarios en relación a la remoción de la tela por el retiro traumático de pestañas.</p>
+                                            <p> - No usar gasas sobre los ojos, debido a que puede deteriorar la calidad de la córnea, ya que el párpado suele quedar retraído y producir úlceras oculares.</p>
+                                            <p> - Aplicar lágrimas artificiales o suero fisiológico 0.9% 3 veces al día. Todas las maniobras de mantención están destinadas a preservar la calidad del tejido, así como también a mantener las condiciones anatómicas del donante.
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 3 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP3" aria-expanded="false" aria-controls="corneaP3">
+                                            3. ¿Existe un límite de edad para donar córneas?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP3" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+
+                                           <p> No existe una edad que, por sí sola, determine si una córnea es apta para ser donada. La calidad y viabilidad del tejido se evalúan mediante estudios especializados, entre ellos el recuento de células endoteliales, que permite determinar si la córnea reúne las condiciones necesarias para su utilización. </p>
+                                            <p> A nivel local, la pesquisa de potenciales donantes de córneas considera personas desde los 2 hasta los 85 años.</p>
+                                            <p> En el caso de los menores de 2 años, sus córneas no se consideran adecuadas para el trasplante debido a características anatómicas propias de esta etapa del desarrollo, como su mayor flexibilidad, elevada curvatura, menor diámetro y menor espesor, que dificultan su manipulación durante el procedimiento.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 4 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP4" aria-expanded="false" aria-controls="corneaP4">
+                                            4. ¿Quién puede recibir trasplante de córneas?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP4" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+
+                                            <p> El trasplante de córnea está indicado para personas que presentan enfermedades, lesiones o alteraciones que afectan la transparencia, estructura o funcionamiento de este tejido, comprometiendo su visión.</p>
+                                            <p> Entre las principales condiciones que pueden requerir un trasplante de córnea se encuentran:</p>
+                                            <p> - Queratocono: La córnea se adelgaza estructuralmente y toma forma de cono, causando visión severamente distorsionada e incapacitante.</p>
+                                            <p> - Cicatrices Corneales: Causadas por traumas graves o infecciones profundas, dejan opacidades que impiden que la luz entre al ojo.</p>
+                                            <p> - Edema Corneal: Daño irreversible en las células endoteliales, responsables de bombear líquido y mantener la córnea transparente.</p>
+                                            <p> - Falla del limbo corneal: A menudo causada por quemaduras químicas. La conjuntiva invade y cubre la córnea, cegando al paciente.</p>
+                                            <p> La indicación de un trasplante debe ser evaluada por un médico oftalmólogo especialista en córnea, quien determinará si el procedimiento es necesario y adecuado para cada paciente.</p>
+                                            <p> El trasplante de córnea puede permitir recuperar o mejorar la visión y, con ello, contribuir a una mejor calidad de vida.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 5 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP5" aria-expanded="false" aria-controls="corneaP5">
+                                            5. ¿Por qué es tan importante notificar cuando un paciente fallece?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP5" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                                            
+                                            <p>Es importante notificar inmediatamente porque existe un límite de tiempo para el procuramiento de córneas. </p>
+                                            <p>En condiciones en las que el donante PCR se ha mantenido en cámara de refrigeración dentro de las primeras 6 horas, post asistolia, el procuramiento se puede efectuar hasta 24 horas posteriores a la defunción del donante. Del caso contrario, el tejido corneal debe ser procurado antes de 6 horas post asistolia.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 6 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP6" aria-expanded="false" aria-controls="corneaP6">
+                                            6. ¿Qué documentos necesitas para solicitar córnea?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP6" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas">
+                                        <div class="accordion-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                                           
+                                            <p>Consentimiento informado y Formulario de solicitud</p>
+                                            <p>No olvides mandar el certificado de implante escaneado por ambos lados al correo electrónico.</p><a href="mailto:procuramiento.hspc@gmail.com">procuramiento.hspc@gmail.com</a><br>
+                                            <img src="img/ConsentimientoInformado.png" alt="Imagen de consentimiento informado" class="img-fluid w-50">
+                                            <img src="img/FormularioDeSolicitud.png" alt="Imagen de consentimiento informado" class="img-fluid w-50">
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Pregunta 7 -->
+                                <div class="accordion-item mb-2 border rounded">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold" style="color: #1567a4; font-family: 'Arial', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#corneaP7" aria-expanded="false" aria-controls="corneaP7">
+                                            7. ¿Qué debes saber sobre la donación de córneas?
+                                        </button>
+                                    </h2>
+                                    <div id="corneaP7" class="accordion-collapse collapse" data-bs-parent="#subAcordeonCorneas" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                                            <!-- Agrega aquí la respuesta 7 -->
+                                            <p><strong>¿Qué debes saber sobre la donación de córneas?</strong></p>
+                                            <p><strong>La donación de córneas altera la apariencia física:</strong> el procedimiento se realiza de manera cuidadosa, procurando preservar la apariencia del donante.</p>
+                                            <p><strong>Es realizada por profesionales especializados:</strong> el procuramiento de tejido corneal está a cargo de personal de salud capacitado.</p>
+                                            <p><strong>Se realiza con respeto y dignidad:</strong> todo el proceso considera el respeto por la persona fallecida y su familia.</p>
+                                            <p><strong>La donación de córneas es una oportunidad para ayudar a otras personas a recuperar o mejorar su visión.</p>
+
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Fin de Mini Acordeones de Córneas -->
+
+                        </div>
+                    </div>
                 </div>
-                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionTwo">
-                    <div class="accordion-body">
-                        Loren ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            </div>
+
+            <!-- Módulo 3: Consulta Amnios -->
+            <div class="accordion mb-2" id="accordionThree">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" style="background-color: #1567a4; color: white; border: none; font-family: 'Arial Black', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Módulo 3: Consulta Amnios 
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionThree">
+                        <div class="accordion-body">
+                            <!-- Agrega aquí el contenido de Calotas -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4: Consulta Tejido óseo “Cabeza femoral” -->
+            <div class="accordion mb-2" id="accordionFour">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" style="background-color: #f6b21f; color: white; border: none; font-family: 'Arial Black', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Módulo 4: Consulta Tejido óseo “Cabeza femoral”
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFour">
+                        <div class="accordion-body">
+                            <!-- Agrega aquí el contenido de Cabeza femoral -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 5: Consulta Calotas -->
+            <div class="accordion mb-2" id="accordionFive">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" style="background-color: #1567a4; color: white; border: none; font-family: 'Arial Black', Arial, sans-serif;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Módulo 5: Consulta Membrana amniótica
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFive">
+                        <div class="accordion-body">
+                            <!-- Agrega aquí el contenido de Membrana amniótica -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Alerta -->
-        <div class="mb-4 modal fade" id="modalInicio" tabindex="-1">
-             <div class="modal-dialog modal-dialog-centered">
+        <!-- Alerta Inicial -->
+        <div class="modal fade" id="modalInicio" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title">⚠️ Aviso Importante - UPOT</h5>
+                    <div class="modal-header text-white" style="background-color: #1567a4;">
+                        <h5 class="modal-title fw-bold">¡ALERTA!</h5>
                     </div>
-                    <div class="modal-body">
-                        Bienvenido al portal de capacitación. Revisa cada video completo.
+                    <div class="modal-body" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">
+                        ¡No olvides notificar a pacientes con daño neurológico severo en Glasgow menor o igual a 7, pacientes en código lila y fallecidos!
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                        <button type="button" class="btn" style="background-color: #1567a4; color: white; border: none;" data-bs-dismiss="modal">Entendido</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!--Encuesta-->
-        <div class="mb-4 modal fade" id="modalEncuesta" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
+        <!-- Encuesta 1 -->
+        <div class="modal fade" id="modalEncuesta" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title">1. ¿Que banda le gusta al Cris?</h5>
+                    <div class="modal-header text-white" style="background-color: #1567a4;">
+                        <h5 class="modal-title" style="color: white; font-family: 'Arial', Arial, sans-serif; text-align: justify; font-size: 1rem;">1. Un paciente de 52 años con daño cerebral catastrófico presenta ausencia de reflejos troncoencefálicos, temperatura central de 36,5 °C, PAM de 85 mmHg, PaCO₂ de 40 mmHg y adecuada oxigenación. Sin embargo, recibió una infusión de midazolam y fentanilo, suspendida hace 2 horas, y presenta insuficiencia renal y hepática.</h5>
                     </div>
                     <div class="modal-body">
-                        <p>Seleccione una opción:</p>
+                        <p class="fw-bold" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">¿Cuál es la conducta más adecuada antes de realizar el test de apnea?</p>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta1" id="p1_opcionA" value="A">
                             <label class="form-check-label" for="p1_opcionA">
-                                Opción A: Los Bunkers
+                                Opción A: Iniciar el test, ya que cumple con los parámetros hemodinámicos y respiratorios.
                             </label>
                         </div>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta1" id="p1_opcionB" value="B">
                             <label class="form-check-label" for="p1_opcionB">
-                                Opción B: Los Tres
+                                Opción B: Realizar el test, porque la ausencia de reflejos troncoencefálicos descarta efectos farmacológicos.
                             </label>
                         </div>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta1" id="p1_opcionC" value="C">
                             <label class="form-check-label" for="p1_opcionC">
-                                Opción C: Los Prisioneros
+                                Opción C: Posponer el test hasta descartar efectos residuales de los sedantes y opioides.
                             </label>
                         </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta1" id="p1_opcionD" value="D">
+                            <label class="form-check-label" for="p1_opcionD">
+                                Opción D: Administrar flumazenilo y comenzar inmediatamente el test.
+                            </label>
+                        </div>
+                        <div id="resultadoEncuesta" class="fw-bold mt-3"></div>
                     </div>
                     <div class="modal-footer d-flex justify-content-between">
-                        <div id="resultadoEncuesta" class="fw-bold"></div>
                         <button type="button" id="btnEvaluar" class="btn btn-success">Comprobar respuesta</button>
-                        <button type="button" id="btnPregunta2" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#modalEncuesta2">Continuar</button>
+                        <button type="button" id="btnPregunta2" style="background-color: #1567a4; color: white; border: none;" class="btn" data-bs-toggle="modal" data-bs-target="#modalEncuesta2" disabled>Continuar</button>
                     </div>
                 </div>
             </div>           
         </div>
 
-        <div class="mb-4 modal fade" id="modalEncuesta2" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
+        <!-- Encuesta 2 -->
+        <div class="modal fade" id="modalEncuesta2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header bg-primary text-white">
-                        <h5 class="modal-title">1. ¿Que juego le gusta al Cris?</h5>
+                    <div class="modal-header text-white" style="background-color: #1567a4;">
+                        <h5 class="modal-title" style="color: white; font-family: 'Arial', Arial, sans-serif; text-align: justify; font-size: 1rem;">2. Durante la realización del test de apnea, un paciente presenta una disminución progresiva de la saturación hasta 82%, pese a las medidas de oxigenación, sin movimientos respiratorios espontáneos.</h5>
                     </div>
                     <div class="modal-body">
-                        <p>Seleccione una opción:</p>
+                        <p class="fw-bold" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">¿Cuál es la conducta más adecuada?</p>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta2" id="p2_opcionA" value="A">
                             <label class="form-check-label" for="p2_opcionA">
-                                Opción A: Pokemon Esmeralda
+                                Opción A: Continuar hasta alcanzar una PaCO₂ de 60 mmHg.
                             </label>
                         </div>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta2" id="p2_opcionB" value="B">
                             <label class="form-check-label" for="p2_opcionB">
-                                Opción B: Kirby
+                                Opción B: Interrumpir el test, obtener gasometría arterial si es posible sin retrasar la intervención y restablecer el soporte ventilatorio.
                             </label>
                         </div>
                         <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
                             <input class="form-check-input" type="radio" name="pregunta2" id="p2_opcionC" value="C">
                             <label class="form-check-label" for="p2_opcionC">
-                                Opción C: Mario Kart
+                                Opción C: Continuar, porque la desaturación demuestra ausencia de actividad del tronco encefálico.
                             </label>
                         </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta2" id="p2_opcionD" value="D">
+                            <label class="form-check-label" for="p2_opcionD">
+                                Opción D: Aumentar el tiempo de desconexión para asegurar el estímulo hipercápnico.
+                            </label>
+                        </div>
+                        <div id="resultadoEncuesta2" class="fw-bold mt-3"></div>
                     </div>
                     <div class="modal-footer d-flex justify-content-between">
-                        <div id="resultadoEncuesta2" class="fw-bold"></div>
                         <button type="button" id="btnEvaluar2" class="btn btn-success">Comprobar respuesta</button>
-                        <button type="button" id="salir" class="btn btn-primary mt-2" data-bs-dismiss="modal">Finalizar Encuesta</button>
+                        <button type="button" id="btnPregunta3" style="background-color: #1567a4; color: white; border: none;" class="btn" data-bs-toggle="modal" data-bs-target="#modalEncuesta3" disabled>Continuar</button>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <!-- Encuesta 3 -->
+        <div class="modal fade" id="modalEncuesta3" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header text-white" style="background-color: #1567a4;">
+                        <h5 class="modal-title" style="color: white; font-family: 'Arial', Arial, sans-serif; text-align: justify; font-size: 1rem;">3. Un paciente con daño cerebral catastrófico presenta ausencia de reflejos troncoencefálicos. Previo al test de apnea, se encuentra con PAM de 58 mmHg, pese a soporte con noradrenalina, y SpO₂ de 97% con FiO₂ de 100%.</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fw-bold" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">¿Cuál es la conducta más adecuada?</p>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta3" id="p3_opcionA" value="A">
+                            <label class="form-check-label" for="p3_opcionA">
+                                Opción A: Iniciar el test, ya que la oxigenación es adecuada.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta3" id="p3_opcionB" value="B">
+                            <label class="form-check-label" for="p3_opcionB">
+                                Opción B: Realizar el test durante un máximo de 5 minutos.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta3" id="p3_opcionC" value="C">
+                            <label class="form-check-label" for="p3_opcionC">
+                                Opción C: Posponer el test hasta optimizar la estabilidad hemodinámica.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta3" id="p3_opcionD" value="D">
+                            <label class="form-check-label" for="p3_opcionD">
+                                Opción D: Desconectar al paciente y aumentar la noradrenalina si presenta hipotensión.
+                            </label>
+                        </div>
+                        <div id="resultadoEncuesta3" class="fw-bold mt-3"></div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" id="btnEvaluar3" class="btn btn-success">Comprobar respuesta</button>
+                        <button type="button" id="btnPregunta4" style="background-color: #1567a4; color: white; border: none;" class="btn" data-bs-toggle="modal" data-bs-target="#modalEncuesta4" disabled>Continuar</button>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <!-- Encuesta 4 -->
+        <div class="modal fade" id="modalEncuesta4" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header text-white" style="background-color: #1567a4;">
+                        <h5 class="modal-title" style="color: white; font-family: 'Arial', Arial, sans-serif; text-align: justify; font-size: 1rem;">4. Durante la evaluación de un paciente con sospecha de muerte por criterios neurológicos, se realiza el test de apnea. El paciente presenta una PaCO₂ basal de 39 mmHg y un pH de 7,38. Tras 10 minutos de observación, no presenta movimientos respiratorios espontáneos. La gasometría arterial final evidencia una PaCO₂ de 63 mmHg y un pH de 7,25.</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="fw-bold" style="text-align: justify; font-family: 'Arial', Arial, sans-serif;">¿Cuál es la interpretación más adecuada del resultado?</p>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta4" id="p4_opcionA" value="A">
+                            <label class="form-check-label" for="p4_opcionA">
+                                Opción A: El test es positivo, ya que la PaCO₂ supera los 60 mmHg y no existe esfuerzo respiratorio.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta4" id="p4_opcionB" value="B">
+                            <label class="form-check-label" for="p4_opcionB">
+                                Opción B: El test es negativo, porque la PaCO₂ no aumentó al menos 30 mmHg respecto del valor basal.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta4" id="p4_opcionC" value="C">
+                            <label class="form-check-label" for="p4_opcionC">
+                                Opción C: El test no cumple todos los criterios para considerarse positivo, debido a que el pH final es superior a 7,30.
+                            </label>
+                        </div>
+                        <div class="form-check border rounded p-2 mb-2 bg-light shadow-sm">
+                            <input class="form-check-input" type="radio" name="pregunta4" id="p4_opcionD" value="D">
+                            <label class="form-check-label" for="p4_opcionD">
+                                Opción D: El test es indeterminado, ya que la PaCO₂ debe alcanzar al menos 70 mmHg para confirmar ausencia de respuesta respiratoria.
+                            </label>
+                        </div>
+                        <div id="resultadoEncuesta4" class="fw-bold mt-3"></div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <button type="button" id="btnEvaluar4" class="btn btn-success">Comprobar respuesta</button>
+                        <button type="button" id="salir" style="background-color: #1567a4; color: white; border: none;" class="btn" data-bs-dismiss="modal" disabled>Finalizar Encuesta</button>
                     </div>
                 </div>
             </div>           
@@ -149,6 +446,5 @@
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="app.js"></script>
-
     </body> 
 </html>
